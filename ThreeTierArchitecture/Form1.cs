@@ -30,12 +30,11 @@ namespace ThreeTierArchitecture
 
 
             OleDbConnection con = new OleDbConnection(@" Provider = Microsoft.ACE.OLEDB.12.0; Data Source = C:\Users\user\Desktop\Soso\ThreeTierArchitecture\Store.accdb ");
-            OleDbDataAdapter Da;
+
             DataTable Dt = new DataTable();
             OleDbCommand cmd;
             OleDbDataReader dr;
 
-            //con = new OleDbConnection("Provider=Microsoft.ACE.Oledb.12.0;Data Source=dbUsers.accdb");
             cmd = new OleDbCommand();
             con.Open();
             cmd.Connection = con;

@@ -11,7 +11,7 @@ namespace ThreeTierArchitecture
     class purchases
     {
         OleDbConnection cn = new OleDbConnection(@" Provider = Microsoft.ACE.OLEDB.12.0; Data Source = C:\Users\user\Desktop\Soso\ThreeTierArchitecture\Store.accdb");
-        OleDbDataAdapter Da;
+  
         DataTable Dt = new DataTable();
         OleDbCommand cmd;
         
@@ -20,8 +20,8 @@ namespace ThreeTierArchitecture
         public void parseDataToDataBase(double quantity, double price, string itemName,string Size)
         {
 
-            double subTotal = quantity * price;
-            cmd = new OleDbCommand("Insert Into items Values('" + itemName + "','" + quantity + "','" + Size + "','" + price +"','"+ subTotal + "')", cn);
+            double x = quantity + 13;
+            cmd = new OleDbCommand("Insert Into items Values('" + Convert.ToInt32(x) + "','" + itemName +"','" + quantity + "','" + Size + "','" + price +"')", cn);
             cn.Open();
             cmd.ExecuteNonQuery();
             cn.Close();

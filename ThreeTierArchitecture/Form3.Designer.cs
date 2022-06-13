@@ -42,6 +42,8 @@ namespace ThreeTierArchitecture
             this.button2 = new System.Windows.Forms.Button();
             this.Add = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
+            this.label5 = new System.Windows.Forms.Label();
+            this.textBox5 = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -59,6 +61,7 @@ namespace ThreeTierArchitecture
             this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dataGridView1.Size = new System.Drawing.Size(645, 560);
             this.dataGridView1.TabIndex = 10;
+            this.dataGridView1.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellClick);
             this.dataGridView1.DoubleClick += new System.EventHandler(this.dataGridView1_DoubleClick);
             // 
             // textBox3
@@ -99,7 +102,7 @@ namespace ThreeTierArchitecture
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(12, 356);
+            this.label2.Location = new System.Drawing.Point(12, 322);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(69, 29);
             this.label2.TabIndex = 12;
@@ -118,7 +121,7 @@ namespace ThreeTierArchitecture
             // textBox4
             // 
             this.textBox4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox4.Location = new System.Drawing.Point(155, 356);
+            this.textBox4.Location = new System.Drawing.Point(155, 322);
             this.textBox4.Name = "textBox4";
             this.textBox4.Size = new System.Drawing.Size(152, 30);
             this.textBox4.TabIndex = 18;
@@ -173,11 +176,31 @@ namespace ThreeTierArchitecture
             this.button3.UseVisualStyleBackColor = true;
             this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Location = new System.Drawing.Point(11, 65);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(36, 29);
+            this.label5.TabIndex = 25;
+            this.label5.Text = "ID";
+            // 
+            // textBox5
+            // 
+            this.textBox5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox5.Location = new System.Drawing.Point(155, 65);
+            this.textBox5.Name = "textBox5";
+            this.textBox5.Size = new System.Drawing.Size(152, 30);
+            this.textBox5.TabIndex = 26;
+            // 
             // Form3
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1017, 584);
+            this.Controls.Add(this.textBox5);
+            this.Controls.Add(this.label5);
             this.Controls.Add(this.button3);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.button2);
@@ -193,6 +216,7 @@ namespace ThreeTierArchitecture
             this.Controls.Add(this.dataGridView1);
             this.Name = "Form3";
             this.Text = "Form3";
+            this.Load += new System.EventHandler(this.Form3_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -214,5 +238,7 @@ namespace ThreeTierArchitecture
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button Add;
         private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.TextBox textBox5;
     }
 }
